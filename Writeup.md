@@ -4,8 +4,8 @@
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
-[image2]: ./test_images_output/image6.jpeg "Lines"
+[image1]: 
+[image2]: ./test_images_output/image1.jpeg "Lines"
 
 ---
 
@@ -15,11 +15,13 @@
 
 My pipeline (`process_image` function) consisted of 5 steps. 
 1) I converted the images to gray scale.
-![alt text][image1]
 2) I blurred the image using a Gaussian filter.
 3) I got the edges using Canny.
 4) I did a mask on the regions of interest, using vertices based on the image resolution.
 5) I applied the Hough transformation and got the lines.
+Before extrapolating the line:
+
+After:
 ![alt text][image2]
 6) I merged the lines with the original image
 
