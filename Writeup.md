@@ -17,7 +17,7 @@
 
 ### 1. Brief description of my pipeline and draw_lines() function.
 
-My pipeline (`process_image` function) consisted of 5 steps. 
+My pipeline (`process_image` function) consisted of 6 steps. 
 1) I converted the images to gray scale.
 ![alt text][image1]
 2) I blurred the image using a Gaussian filter.
