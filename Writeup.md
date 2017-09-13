@@ -4,8 +4,12 @@
 
 [//]: # (Image References)
 
-[image1]: 
-[image2]: ./test_images_output/image1.jpeg "Lines"
+[image1]: ./test_images_output/gray.jpeg "Lines"
+[image2]: ./test_images_output/blur.jpeg "Lines"
+[image3]: ./test_images_output/canny.jpeg "Lines"
+[image4]: ./test_images_output/masked.jpeg "Lines"
+[image5]: ./test_images_output/hough.jpeg "Lines"
+[image6]: ./test_images_output/image6.jpeg "Lines"
 
 ---
 
@@ -15,15 +19,17 @@
 
 My pipeline (`process_image` function) consisted of 5 steps. 
 1) I converted the images to gray scale.
+![alt text][image1]
 2) I blurred the image using a Gaussian filter.
-3) I got the edges using Canny.
-4) I did a mask on the regions of interest, using vertices based on the image resolution.
-5) I applied the Hough transformation and got the lines.
-Before extrapolating the line:
-
-After:
 ![alt text][image2]
+3) I got the edges using Canny.
+![alt text][image3]
+4) I did a mask on the regions of interest, using vertices based on the image resolution.
+![alt text][image4]
+5) I applied the Hough transformation, extrapolation and got the lines.
+![alt text][image5]
 6) I merged the lines with the original image
+![alt text][image6]
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by checking for the signal of the slope, negative on the left and positive on the right. Moreover, I add a range for the slopes from 0.5 to 0.8 to have a good inclination of the line. After that, I did the average of the m's and b's of the lines of which side resulting in two "averages" lines that I extrapolate using the line equation. Plus, the left line is green and the right is red.
 
